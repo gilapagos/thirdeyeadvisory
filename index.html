@@ -595,6 +595,60 @@
         }
 
         /* ============================================
+           ENGAGEMENT/HOW WE WORK SECTION
+           ============================================ */
+        .engagement {
+            background: var(--color-black);
+            position: relative;
+        }
+
+        .engagement::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--color-gray), transparent);
+        }
+
+        .engagement-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .engagement-item {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .engagement-item h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .engagement-item p {
+            color: var(--color-gray-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 968px) {
+            .engagement-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .engagement-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ============================================
            CONTACT SECTION
            ============================================ */
         .contact {
@@ -805,6 +859,7 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#approach">Approach</a></li>
                     <li><a href="#focus">Focus</a></li>
+                    <li><a href="#engagement">How We Work</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <a href="#contact" class="nav-cta">Let's Talk</a>
@@ -926,7 +981,7 @@
                             <svg class="approach-list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"/>
                             </svg>
-                            <span class="approach-list-text">Pattern recognition from Series A through exit</span>
+                            <span class="approach-list-text">Pattern recognition from Seed through growth stages</span>
                         </li>
                         <li>
                             <svg class="approach-list-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -935,15 +990,6 @@
                             <span class="approach-list-text">Enterprise sales and partnership expertise</span>
                         </li>
                     </ul>
-                </div>
-                <div class="approach-visual">
-                    <div class="approach-visual-inner">
-                        <div class="approach-visual-content">
-                            <div class="approach-stat">A→B</div>
-                            <p class="approach-stat-label">Series A/B Sweet Spot</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -972,6 +1018,34 @@
         </div>
     </section>
 
+    <!-- How We Work Section -->
+    <section class="engagement section-padding" id="engagement">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">How We Work</p>
+                <h2 class="section-title">Flexible Engagements</h2>
+            </div>
+            <div class="engagement-grid">
+                <div class="engagement-item">
+                    <h4>Retainer</h4>
+                    <p>Ongoing strategic support with regular touchpoints</p>
+                </div>
+                <div class="engagement-item">
+                    <h4>Project-Based</h4>
+                    <p>Focused engagements around specific outcomes</p>
+                </div>
+                <div class="engagement-item">
+                    <h4>Embedded</h4>
+                    <p>Fractional or interim roles for deeper involvement</p>
+                </div>
+                <div class="engagement-item">
+                    <h4>Equity Partnership</h4>
+                    <p>Aligned incentives for the right opportunities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact section-padding" id="contact">
         <div class="container">
@@ -982,8 +1056,8 @@
                     Whether you're preparing for a funding round, refining your GTM approach, 
                     or navigating a critical inflection point—let's have a conversation.
                 </p>
-                <a href="mailto:thirdeyeadvisory-gilr@pm.me" class="contact-email">
-                    thirdeyeadvisory-gilr@pm.me
+                <a href="/cdn-cgi/l/email-protection#0d7965647f696874686c697b647e627f74206a64617f4d7d60236068" class="contact-email">
+                    <span class="__cf_email__" data-cfemail="f1859998839594889490958798829e8388dc96989d83b1819cdf9c94">[email&#160;protected]</span>
                 </a>
                 <div class="contact-social">
                     <a href="https://www.linkedin.com/in/grogoff/" aria-label="LinkedIn" target="_blank" rel="noopener">
@@ -1020,7 +1094,7 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Navigation scroll effect
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
@@ -1038,8 +1112,4 @@
             navLinks.classList.toggle('active');
         });
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('hr
+        // Smooth scrol
