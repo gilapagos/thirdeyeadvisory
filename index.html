@@ -267,7 +267,7 @@
         }
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
         }
         .service-card {
@@ -356,7 +356,7 @@
             font-weight: 600;
             margin-bottom: 0.75rem;
         }
-        .focus-item p { color: var(--color-gray-light); font-size: 0.9rem; }
+        .focus-item p { color: var(--color-gray-light); font-size: 1rem; line-height: 1.6; }
 
         /* Engagement */
         .engagement { background: var(--color-black); position: relative; }
@@ -459,6 +459,7 @@
             }
             .nav-links.active { display: flex; }
             .nav-toggle { display: flex; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
             .focus-grid { grid-template-columns: repeat(2, 1fr); }
             .engagement-grid { grid-template-columns: repeat(2, 1fr); }
         }
@@ -467,6 +468,7 @@
             .container { padding: 0 1.5rem; }
             .hero-cta-group { flex-direction: column; }
             .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+            .services-grid { grid-template-columns: 1fr; }
             .focus-grid { grid-template-columns: 1fr; }
             .engagement-grid { grid-template-columns: 1fr; }
             .footer-content { flex-direction: column; text-align: center; }
@@ -663,7 +665,7 @@
                 <p class="section-eyebrow">Get In Touch</p>
                 <h2>Ready to Talk Strategy?</h2>
                 <p>Whether you're preparing for a funding round, refining your GTM approach, or navigating a critical inflection point—let's have a conversation.</p>
-                <a href="mailto:thirdeyeadvisory-gilr@pm.me" class="contact-email">thirdeyeadvisory-gilr@pm.me</a>
+                <a href="/cdn-cgi/l/email-protection#60140809120405190501041609130f12194d07090c1220100d4e0d05" class="contact-email"><span class="__cf_email__" data-cfemail="0d7965647f696874686c697b647e627f74206a64617f4d7d60236068">[email&#160;protected]</span></a>
                 <div class="contact-social">
                     <a href="https://www.linkedin.com/in/grogoff/" aria-label="LinkedIn" target="_blank" rel="noopener">
                         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -693,7 +695,7 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Navigation scroll effect
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
@@ -728,12 +730,4 @@
         let currentIndex = 0;
 
         function rotateWords() {
-            words[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % words.length;
-            words[currentIndex].classList.add('active');
-        }
-
-        setInterval(rotateWords, 2500);
-    </script>
-</body>
-</html>
+ 
